@@ -1,5 +1,0 @@
-Terminal    = "kitty"
-FileManager = "dolphin"
-Menu        = "rofi -show drun"
-Browser     = "zen-browser"
-Discord     = "vesktop"
