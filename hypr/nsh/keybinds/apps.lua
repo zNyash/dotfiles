@@ -1,0 +1,13 @@
+-- hl.bind("SUPER + Q", hl.dsp.exec_cmd(terminal))     -- Termina
+-- hl.bind("SUPER + E", hl.dsp.exec_cmd(fileManager))  -- File Manager
+-- hl.bind("SUPER + D", hl.dsp.exec_cmd(Discord))      -- Discord
+-- hl.bind("SUPER + B", hl.dsp.exec_cmd(browser))      -- Browser
+-- hl.bind("SUPER + ALT + C", hl.dsp.exec_cmd("code")) -- Code
+-- hl.bind("SUPER + O", hl.dsp.exec_cmd())         -- OSU
+-- hl.bind("SUPER + G", hl.dsp.exec_cmd())         -- Github Desktop
+
+-- hl.bind("SUPER + R", hl.dsp.exec_cmd("noctalia msg panel-toggle launcher"))           -- Launcher
+-- hl.bind("SUPER + L", hl.dsp.exec_cmd("noctalia msg panel-toggle session"))            -- Session
+-- hl.bind("SUPER + V", hl.dsp.exec_cmd("noctalia msg panel-toggle clipboard"))          -- Clipboard
+-- hl.bind("SUPER + W", hl.dsp.exec_cmd("noctalia msg panel-toggle wallpaper"))          -- Clipboard
+-- hl.bind("SUPER + SLASH", hl.dsp.exec_cmd("noctalia msg panel-toggle control-center")) -- Clipboard
