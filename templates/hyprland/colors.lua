@@ -2,7 +2,7 @@ hl.config({
     general = {
         col = {
             active_border   = "rgb({{colors.primary.default.hex_stripped}})",
-            inactive_border = "rgb({{colors.tertiary_container.default.hex_stripped}})",
+            inactive_border = "rgb({{colors.surface_variant.default.hex_stripped}})",
         },
     },
     misc = {
