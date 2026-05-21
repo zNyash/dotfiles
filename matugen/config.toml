@@ -35,13 +35,14 @@ output_path = '~/.local/state/quickshell/user/generated/wallpaper/path.txt'
 
 # VS Code matugen extension
 [templates.vscode-raw]
-input_path = './templates/vscode/vscode-colors'
+input_path = '~/.config/matugen/vscode/vscode-colors'
 output_path = '~/.cache/matugen/vscode-colors'
 
 [templates.vscode-json]
-input_path = './templates/vscode/vscode-colors.json'
+input_path = '~/.config/matugen/vscode/vscode-colors.json'
 output_path = '~/.cache/matugen/vscode-colors.json'
 
 [templates.discord]
-input_path = './templates/discord/discord-matugen.css'
+input_path = '~/.config/matugen/discord/discord-matugen.css'
 output_path = '~/.config/vesktop/themes/discord-matugen.css'
+
