@@ -45,3 +45,11 @@ output_path = '~/.cache/matugen/vscode-colors.json'
 [templates.discord]
 input_path = './templates/discord/discord-matugen.css'
 output_path = '~/.config/vesktop/themes/discord-matugen.css'
+
+[templates.zen-userContent]
+input_path = './templates/zen/userContent.css'
+output_path = '~/.config/zen/pbkmoeqq.Default (release)/chrome/userContent.css'
+
+[templates.zen-userStyles]
+input_path = './templates/zen/userStyles.css'
+output_path = '~/.config/zen/pbkmoeqq.Default (release)/chrome/userStyles.css'
