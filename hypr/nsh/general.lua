@@ -12,7 +12,7 @@ hl.config({
             inactive_border = "rgba(595959aa)",
         },
 
-        resize_on_border = true,
+        resize_on_border = false,
 
         snap             = {
             enabled = true,
