@@ -1,50 +1,12 @@
--- Disable blur for xwayland context menus
-hl.window_rule({ match = { class = "^()$", title = "^()$" }, no_blur = true })
-
--- Disable blur for every window
-hl.window_rule({ match = { class = ".*" }, no_blur = true })
-
-hl.window_rule({
-    name     = "fix-xwayland-drags",
-    match    = {
-        class      = "^$",
-        title      = "^$",
-        xwayland   = true,
-        float      = true,
-        fullscreen = false,
-        pin        = false,
-    },
-
-    no_focus = true,
-})
-
-hl.window_rule({
-    name  = "move-hyprland-run",
-    match = { class = "hyprland-run" },
-
-    move  = "20 monitor_h-120",
-    float = true,
-})
-
-hl.window_rule({
-    name = "enable-blur-for-kitty",
-    match = {
-        class = ".*kitty.*"
-    },
-
-    opacity = 0.80,
-    no_blur = false,
-})
-
-hl.layer_rule({
-    name = "noctalia",
-    match = {
-        namespace = "^noctalia-(bar-.+|notification|dock|panel)$",
-    },
-    ignore_alpha = 0.5,
-    blur = true,
-    blur_popups = true,
-})
+-- hl.layer_rule({
+--     name = "noctalia",
+--     match = {
+--         namespace = "^noctalia-(bar-.+|notification|dock|panel)$",
+--     },
+--     ignore_alpha = 0.5,
+--     blur = true,
+--     blur_popups = true,
+-- })
 
 -- Floating
 hl.window_rule({ match = { title = "^(Open File)(.*)$" }, center = true })
@@ -103,3 +65,67 @@ hl.window_rule({ match = { title = "^(Copying — Dolphin)$" }, move = { 40, 80 
 hl.window_rule({ match = { title = ".*is sharing (a window|your screen).*" }, float = true })
 hl.window_rule({ match = { title = ".*is sharing (a window|your screen).*" }, pin = true })
 hl.window_rule({ match = { title = ".*is sharing (a window|your screen).*" }, move = { "(monitor_w*.5-window_w*.5)", "(monitor_h-window_h-12)" } })
+
+
+-- Disable blur for xwayland context menus
+hl.window_rule({ match = { class = "^()$", title = "^()$" }, no_blur = true })
+
+-- Disable blur for every window
+hl.window_rule({ match = { class = ".*" }, no_blur = true })
+
+hl.window_rule({
+    name     = "fix-xwayland-drags",
+    match    = {
+        class      = "^$",
+        title      = "^$",
+        xwayland   = true,
+        float      = true,
+        fullscreen = false,
+        pin        = false,
+    },
+
+    no_focus = true,
+})
+
+hl.window_rule({
+    name  = "move-hyprland-run",
+    match = { class = "hyprland-run" },
+
+    move  = "20 monitor_h-120",
+    float = true,
+})
+
+hl.window_rule({
+    name = "enable-blur-for-kitty",
+    match = {
+        class = ".*kitty.*"
+    },
+
+    opacity = 0.80,
+    no_blur = false,
+})
+
+-- Browsers
+hl.window_rule({ match = { class = "^(helium|firefox|zen)$" }, workspace = "1", })
+
+-- osu!
+hl.window_rule({ match = { class = ".*osu.*" }, workspace = "5" })
+hl.window_rule({ match = { class = ".*osu.*" }, immediate = true })
+hl.window_rule({ match = { class = ".*osu.*" }, fullscreen = true })
+hl.window_rule({ match = { class = ".*osu.*" }, decorate = false })
+hl.window_rule({ match = { class = ".*osu.*" }, no_anim = true })
+hl.window_rule({ match = { class = ".*osu.*" }, no_blur = true })
+hl.window_rule({ match = { class = ".*osu.*" }, no_dim = true })
+hl.window_rule({ match = { class = ".*osu.*" }, no_shadow = true })
+hl.window_rule({ match = { class = ".*osu.*" }, opaque = true })
+
+-- Prism Launcher
+hl.window_rule({ match = { class = "^(org\\.prismlauncher\\.PrismLauncher)$" }, workspace = "4" })
+hl.window_rule({ match = { class = "^(org\\.prismlauncher\\.PrismLauncher)$", title = ".*Console.*" }, float = true })
+hl.window_rule({ match = { class = "^(org\\.prismlauncher\\.PrismLauncher)$", title = ".*Console.*" }, size = { "(monitor_w*0.5)", "(monitor_h*0.5)" } })
+hl.window_rule({ match = { class = "^(org\\.prismlauncher\\.PrismLauncher)$", title = ".*Download.*" }, size = { "(monitor_w*0.5)", "(monitor_h*0.5)" } })
+
+-- Minecraft
+hl.window_rule({ match = { title = ".*Minecraft.*" }, workspace = "5" })
+hl.window_rule({ match = { title = ".*Minecraft.*" }, immediate = true })
+hl.window_rule({ match = { class = ".*Minecraft.*" }, fullscreen = true })
