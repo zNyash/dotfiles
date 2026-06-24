@@ -11,9 +11,9 @@
 
 hl.on("hyprland.start", function()
     hl.exec_cmd("/usr/lib/polkit-kde-authentication-agent-1")
-    -- hl.exec_cmd("systemctl --user start hyprpolkitagent")
+    hl.exec_cmd("/usr/lib/pam_kwallet_init")
     hl.exec_cmd("wl-paste --type text --watch cliphist store")
     hl.exec_cmd("wl-paste --type image --watch cliphist store")
     hl.exec_cmd("otd-daemon")
-    hl.exec_cmd("dms run")
+    hl.exec_cmd("vicinae server")
 end)
