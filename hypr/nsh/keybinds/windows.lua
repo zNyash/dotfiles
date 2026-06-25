@@ -20,3 +20,9 @@ hl.bind("SUPER + Right", hl.dsp.focus({ direction = "r" }))
 -- Moving and resizing window with mouse
 hl.bind("SUPER + mouse:272", hl.dsp.window.drag(), { mouse = true })
 hl.bind("SUPER + mouse:273", hl.dsp.window.resize(), { mouse = true })
+
+-- To switch between windows in a floating workspace:
+hl.bind("ALT + Tab", function()
+    hl.dispatch(hl.dsp.window.cycle_next())    -- Change focus to another window
+    hl.dispatch(hl.dsp.window.bring_to_top()) -- Bring it to the top
+end)
