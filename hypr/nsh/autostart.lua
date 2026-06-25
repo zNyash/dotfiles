@@ -10,8 +10,8 @@
 -- end)
 
 hl.on("hyprland.start", function()
-    hl.exec_cmd("/usr/lib/polkit-kde-authentication-agent-1") -- kde-polkit-agent
-    hl.exec_cmd("/usr/lib/pam_kwallet_init") -- kwallet-pam + kwalletmanager
+    hl.exec_cmd("systemctl --user start hyprpolkitagent") -- kde-polkit-agent
+    hl.exec_cmd("gnome-keyring-daemon --start --components=secrets,pkcs11") -- kwallet-pam + kwalletmanager
     hl.exec_cmd("wl-paste --type text --watch cliphist store")
     hl.exec_cmd("wl-paste --type image --watch cliphist store")
     hl.exec_cmd("otd-daemon")
