@@ -110,7 +110,7 @@ hl.window_rule({ match = { class = "^(helium|firefox|zen)$" }, workspace = "1", 
 
 -- osu!
 hl.window_rule({ match = { class = ".*osu.*" }, workspace = "5" })
-hl.window_rule({ match = { class = ".*osu.*" }, immediate = true })
+-- hl.window_rule({ match = { class = ".*osu.*" }, immediate = true })
 -- hl.window_rule({ match = { class = ".*osu.*" }, fullscreen = true })
 -- hl.window_rule({ match = { class = ".*osu.*" }, decorate = false })
 hl.window_rule({ match = { class = ".*osu.*" }, no_anim = true })
