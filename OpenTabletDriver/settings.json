@@ -229,19 +229,37 @@
               "Value": false
             },
             {
+              "Property": "always_apply_to_hover",
+              "Value": true
+            },
+            {
               "Property": "never_intercept_pressure_on_off",
               "Value": false
             },
             {
               "Property": "amount",
               "Value": 3
-            },
-            {
-              "Property": "always_apply_to_hover",
-              "Value": true
             }
           ],
           "Enable": true
+        },
+        {
+          "Path": "slimy_scylla.slimy_scylla_input_degradation_pressure_random",
+          "Settings": [
+            {
+              "Property": "amount_percent",
+              "Value": 10.0
+            },
+            {
+              "Property": "completely_random_pressure",
+              "Value": false
+            },
+            {
+              "Property": "pressure_deadzone_percent",
+              "Value": 0.0
+            }
+          ],
+          "Enable": false
         }
       ],
       "AbsoluteModeSettings": {
