@@ -34,6 +34,10 @@ hl.bind("SUPER + L", hl.dsp.exec_cmd(MenuLock))
 hl.unbind("SUPER + V")
 hl.bind("SUPER + V", hl.dsp.exec_cmd(MenuClipboard))
 
+-- Clipboard menu
+hl.unbind("SUPER + period")
+hl.bind("SUPER + period", hl.dsp.exec_cmd(MenuEmoji))
+
 -- Notifications menu
 hl.unbind("SUPER + N")
 hl.bind("SUPER + N", hl.dsp.exec_cmd(MenuNotifications))
