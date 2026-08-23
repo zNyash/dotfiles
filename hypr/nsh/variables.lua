@@ -1,5 +1,5 @@
 Terminal          = "kitty"
-FileManager       = "nemo"
+FileManager       = "nautilus"
 Browser           = "helium-browser"
 Discord           = "discord"
 GithubDesktop     = "github-desktop"

@@ -55,8 +55,8 @@ hl.unbind("SUPER + SLASH")
 hl.bind("SUPER + SLASH", hl.dsp.exec_cmd(MenuControlCenter))
 
 -- Toggle Bar
-hl.unbind("SUPER + J")
-hl.bind("SUPER + J", hl.dsp.exec_cmd("dms ipc call bar toggle index 0"))
+-- hl.unbind("SUPER + J")
+-- hl.bind("SUPER + J", hl.dsp.exec_cmd("dms ipc call bar toggle index 0"))
 
 -- Screenshot
 hl.unbind("SUPER + SHIFT + S")

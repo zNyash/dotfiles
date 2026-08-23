@@ -18,7 +18,9 @@ alias pw-restart='systemctl --user restart pipewire pipewire-pulse'
 
 # Configs
 alias fish-config='code ~/.config/fish/config.fish'
-alias hypr-config='code ~/.config/hypr'
+alias hypr-config="code ~/.config/hypr/nsh"
+alias hypr-config-main='code ~/.config/hypr'
+alias omarchy-hypr-config='code /usr/share/omarchy/default/hypr/'
 
 # pnpm
 set -gx PNPM_HOME "/home/nyash/.local/share/pnpm"
