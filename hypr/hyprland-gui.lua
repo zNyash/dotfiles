@@ -2,7 +2,5 @@
 
 -- Settings
 hl.config({
-    misc = {
-        vrr = 0,
-    },
+
 })

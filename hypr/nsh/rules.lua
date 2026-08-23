@@ -110,9 +110,9 @@ hl.window_rule({ match = { class = "^(helium|firefox|zen)$" }, workspace = "1", 
 
 -- osu!
 hl.window_rule({ match = { class = ".*osu.*" }, workspace = "5" })
-hl.window_rule({ match = { class = ".*osu.*" }, immediate = true })
-hl.window_rule({ match = { class = ".*osu.*" }, fullscreen = true })
-hl.window_rule({ match = { class = ".*osu.*" }, fullscreen_state = "3" })
+-- hl.window_rule({ match = { class = ".*osu.*" }, immediate = true })
+-- hl.window_rule({ match = { class = ".*osu.*" }, fullscreen = true })
+-- hl.window_rule({ match = { class = ".*osu.*" }, fullscreen_state = "3" })
 -- hl.window_rule({ match = { class = ".*osu.*" }, decorate = false })
 hl.window_rule({ match = { class = ".*osu.*" }, no_anim = true })
 hl.window_rule({ match = { class = ".*osu.*" }, no_blur = true })
@@ -130,3 +130,7 @@ hl.window_rule({ match = { class = "^(org\\.prismlauncher\\.PrismLauncher)$", ti
 hl.window_rule({ match = { title = ".*Minecraft.*" }, workspace = "5" })
 hl.window_rule({ match = { title = ".*Minecraft.*" }, immediate = true })
 hl.window_rule({ match = { class = ".*Minecraft.*" }, fullscreen = true })
+
+-- Flameshot
+hl.window_rule({ match = { class = "flameshot" }, float = true })
+hl.window_rule({ match = { class = "flameshot" }, no_anim = true })
