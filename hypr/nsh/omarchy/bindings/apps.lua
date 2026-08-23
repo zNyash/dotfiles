@@ -18,3 +18,5 @@ hl.unbind("SUPER + E")
 hl.unbind("SUPER + ALT + E")
 o.bind("SUPER + E", "File manager", { omarchy = "nautilus" })
 o.bind("SUPER + ALT + E", "File manager (cwd)", { omarchy = "nautilus-cwd" })
+
+o.bind("SUPER + ESCAPE", "System menu", "omarchy-menu toggle system")
