@@ -13,7 +13,7 @@ require("nsh.keybinds.windows")
 -- require("nsh.general")
 -- require("nsh.decoration")
 -- require("nsh.animations")
--- require("nsh.rules")
+require("nsh.rules")
 -- require("nsh.matugen")
 
 require("nsh.omarchy.bindings.apps")

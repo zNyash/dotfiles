@@ -71,7 +71,7 @@ hl.window_rule({ match = { title = ".*is sharing (a window|your screen).*" }, mo
 hl.window_rule({ match = { class = "^()$", title = "^()$" }, no_blur = true })
 
 -- Disable blur for every window
-hl.window_rule({ match = { class = ".*" }, no_blur = true })
+-- hl.window_rule({ match = { class = ".*" }, no_blur = true })
 
 hl.window_rule({
     name     = "fix-xwayland-drags",
@@ -101,7 +101,7 @@ hl.window_rule({
         class = ".*kitty.*"
     },
 
-    opacity = 0.80,
+    opacity = 0.90,
     no_blur = false,
 })
 

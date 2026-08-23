@@ -11,16 +11,27 @@ hl.config({
 })
 
 -- https://wiki.hypr.land/Configuring/Basics/Variables/#decoration
--- hl.config({
---   decoration = {
---     -- Use round window corners.
---     -- rounding = 8,
+hl.config({
+  decoration = {
+    -- Use round window corners.
+    -- rounding = 8,
 
---     -- Dim unfocused windows (0.0 = no dim, 1.0 = fully dimmed).
---     dim_inactive = true,
---     dim_strength = 0.15,
---   },
--- })
+    -- Dim unfocused windows (0.0 = no dim, 1.0 = fully dimmed).
+    dim_inactive     = true,
+    dim_strength     = 0.20,
+
+    active_opacity   = 1.0,
+    inactive_opacity = 0.99,
+
+
+    blur = {
+      enabled = true,
+      size = 4,
+      passes = 1,
+      new_optimizations = true
+    },
+  },
+})
 
 -- https://wiki.hypr.land/Configuring/Basics/Variables/#animations
 -- hl.config({
