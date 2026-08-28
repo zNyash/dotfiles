@@ -46,17 +46,30 @@ hl.window_rule({ match = { title = ".*Welcome" }, float = true })
 hl.window_rule({ match = { title = "^(illogical-impulse Settings)$" }, float = true })
 hl.window_rule({ match = { title = ".*Shell conflicts.*" }, float = true })
 hl.window_rule({ match = { class = "org.freedesktop.impl.portal.desktop.kde" }, float = true })
-hl.window_rule({ match = { class = "org.freedesktop.impl.portal.desktop.kde" }, size = { "(monitor_w*0.60)", "(monitor_h*0.65)" } })
+hl.window_rule({
+	match = { class = "org.freedesktop.impl.portal.desktop.kde" },
+	size = { "(monitor_w*0.60)", "(monitor_h*0.65)" },
+})
 hl.window_rule({ match = { class = "^(Zotero)$" }, float = true })
 hl.window_rule({ match = { class = "^(Zotero)$" }, size = { "(monitor_w*0.45)", "(monitor_h*0.45)" } })
 
 -- Picture-in-Picture
-hl.window_rule({ match = { title = "^([Pp]icture[-\\s]?[Ii]n[-\\s]?[Pp]icture)(.*)$" }, float = true })
-hl.window_rule({ match = { title = "^([Pp]icture[-\\s]?[Ii]n[-\\s]?[Pp]icture)(.*)$" }, keep_aspect_ratio = true })
-hl.window_rule({ match = { title = "^([Pp]icture[-\\s]?[Ii]n[-\\s]?[Pp]icture)(.*)$" }, move = { "(monitor_w*0.73)", "(monitor_h*0.72)" } })
-hl.window_rule({ match = { title = "^([Pp]icture[-\\s]?[Ii]n[-\\s]?[Pp]icture)(.*)$" }, size = { "(monitor_w*0.25)", "(monitor_h*0.25)" } })
-hl.window_rule({ match = { title = "^([Pp]icture[-\\s]?[Ii]n[-\\s]?[Pp]icture)(.*)$" }, float = true })
-hl.window_rule({ match = { title = "^([Pp]icture[-\\s]?[Ii]n[-\\s]?[Pp]icture)(.*)$" }, pin = true })
+hl.window_rule({ match = { title = "Picture in picture" }, float = true })
+hl.window_rule({ match = { title = "Picture in picture" }, center = true })
+hl.window_rule({ match = { title = "Picture in picture" }, size = { "(monitor_w*0.25)", "monitor_h*0.25" } })
+
+-- hl.window_rule({ match = { title = "^([Pp]icture[-\\s]?[Ii]n[-\\s]?[Pp]icture)(.*)$" }, float = true })
+-- hl.window_rule({ match = { title = "^([Pp]icture[-\\s]?[Ii]n[-\\s]?[Pp]icture)(.*)$" }, keep_aspect_ratio = true })
+-- hl.window_rule({
+-- 	match = { title = "^([Pp]icture[-\\s]?[Ii]n[-\\s]?[Pp]icture)(.*)$" },
+-- 	center = true,
+-- })
+-- hl.window_rule({
+-- 	match = { title = "^([Pp]icture[-\\s]?[Ii]n[-\\s]?[Pp]icture)(.*)$" },
+-- 	size = { "(monitor_w*0.25)", "(monitor_h*0.25)" },
+-- })
+-- hl.window_rule({ match = { title = "^([Pp]icture[-\\s]?[Ii]n[-\\s]?[Pp]icture)(.*)$" }, float = true })
+-- hl.window_rule({ match = { title = "^([Pp]icture[-\\s]?[Ii]n[-\\s]?[Pp]icture)(.*)$" }, pin = true })
 
 -- stupid dolphin copy
 hl.window_rule({ match = { title = "^(Copying — Dolphin)$" }, move = { 40, 80 } })
@@ -64,8 +77,10 @@ hl.window_rule({ match = { title = "^(Copying — Dolphin)$" }, move = { 40, 80 
 -- Screen sharing
 hl.window_rule({ match = { title = ".*is sharing (a window|your screen).*" }, float = true })
 hl.window_rule({ match = { title = ".*is sharing (a window|your screen).*" }, pin = true })
-hl.window_rule({ match = { title = ".*is sharing (a window|your screen).*" }, move = { "(monitor_w*.5-window_w*.5)", "(monitor_h-window_h-12)" } })
-
+hl.window_rule({
+	match = { title = ".*is sharing (a window|your screen).*" },
+	move = { "(monitor_w*.5-window_w*.5)", "(monitor_h-window_h-12)" },
+})
 
 -- Disable blur for xwayland context menus
 hl.window_rule({ match = { class = "^()$", title = "^()$" }, no_blur = true })
@@ -74,39 +89,39 @@ hl.window_rule({ match = { class = "^()$", title = "^()$" }, no_blur = true })
 -- hl.window_rule({ match = { class = ".*" }, no_blur = true })
 
 hl.window_rule({
-    name     = "fix-xwayland-drags",
-    match    = {
-        class      = "^$",
-        title      = "^$",
-        xwayland   = true,
-        float      = true,
-        fullscreen = false,
-        pin        = false,
-    },
+	name = "fix-xwayland-drags",
+	match = {
+		class = "^$",
+		title = "^$",
+		xwayland = true,
+		float = true,
+		fullscreen = false,
+		pin = false,
+	},
 
-    no_focus = true,
+	no_focus = true,
 })
 
 hl.window_rule({
-    name  = "move-hyprland-run",
-    match = { class = "hyprland-run" },
+	name = "move-hyprland-run",
+	match = { class = "hyprland-run" },
 
-    move  = "20 monitor_h-120",
-    float = true,
+	move = "20 monitor_h-120",
+	float = true,
 })
 
 hl.window_rule({
-    name = "enable-blur-for-kitty",
-    match = {
-        class = ".*kitty.*"
-    },
+	name = "enable-blur-for-kitty",
+	match = {
+		class = ".*kitty.*",
+	},
 
-    opacity = 0.90,
-    no_blur = false,
+	opacity = 0.90,
+	no_blur = false,
 })
 
 -- Browsers
-hl.window_rule({ match = { class = "^(helium|firefox|zen)$" }, workspace = "1", })
+hl.window_rule({ match = { class = "^(helium|firefox|zen)$" }, workspace = "1" })
 
 -- osu!
 hl.window_rule({ match = { class = ".*osu.*" }, workspace = "5" })
@@ -123,13 +138,22 @@ hl.window_rule({ match = { class = ".*osu.*" }, opaque = true })
 -- Prism Launcher
 hl.window_rule({ match = { class = "^(org\\.prismlauncher\\.PrismLauncher)$" }, workspace = "4" })
 hl.window_rule({ match = { class = "^(org\\.prismlauncher\\.PrismLauncher)$", title = ".*Console.*" }, float = true })
-hl.window_rule({ match = { class = "^(org\\.prismlauncher\\.PrismLauncher)$", title = ".*Console.*" }, size = { "(monitor_w*0.5)", "(monitor_h*0.5)" } })
-hl.window_rule({ match = { class = "^(org\\.prismlauncher\\.PrismLauncher)$", title = ".*Download.*" }, size = { "(monitor_w*0.5)", "(monitor_h*0.5)" } })
+hl.window_rule({
+	match = { class = "^(org\\.prismlauncher\\.PrismLauncher)$", title = ".*Console.*" },
+	size = { "(monitor_w*0.5)", "(monitor_h*0.5)" },
+})
+hl.window_rule({
+	match = { class = "^(org\\.prismlauncher\\.PrismLauncher)$", title = ".*Download.*" },
+	size = { "(monitor_w*0.5)", "(monitor_h*0.5)" },
+})
 
 -- Minecraft
 hl.window_rule({ match = { title = ".*Minecraft.*" }, workspace = "5" })
 hl.window_rule({ match = { title = ".*Minecraft.*" }, immediate = true })
 hl.window_rule({ match = { class = ".*Minecraft.*" }, fullscreen = true })
+
+-- Discord
+hl.window_rule({ match = { class = "^(Discord)" }, workspace = "6" })
 
 -- Flameshot
 hl.window_rule({ match = { class = "flameshot" }, float = true })

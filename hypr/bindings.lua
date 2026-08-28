@@ -23,3 +23,9 @@
 
 -- Logitech MX Keys examples:
 -- o.bind("SUPER + H", nil, "voxtype record toggle")
+
+-- BEGIN OMALAUNCHER GLOBAL SHORTCUTS (managed)
+-- launcher: {"hotkey":"SUPER + SPACE"}
+-- hl.unbind("SUPER + R")
+-- o.bind("SUPER + R", "OmaLauncher", "omarchy-shell shell toggle com.mirashif.omalauncher '{\"source\":\"hotkey\"}'")
+-- END OMALAUNCHER GLOBAL SHORTCUTS
