@@ -12,15 +12,17 @@ end
 
 # Aliases
 # Pipewire
-alias pw-config='code ~/.config/pipewire/pipewire-pulse.conf'
+alias pw-config='nvim ~/.config/pipewire/pipewire-pulse.conf'
 alias pw-default-config='mkdir -p ~/.config/pipewire && cp -rv /usr/share/pipewire/* ~/.config/pipewire/ '
 alias pw-restart='systemctl --user restart pipewire pipewire-pulse'
 
 # Configs
-alias fish-config='code ~/.config/fish/config.fish'
-alias hypr-config="code ~/.config/hypr/nsh"
-alias hypr-config-main='code ~/.config/hypr'
-alias omarchy-hypr-config='code /usr/share/omarchy/default/hypr/'
+alias fish-config='nvim ~/.config/fish/config.fish'
+alias hypr-config="nvim ~/.config/hypr/nsh"
+alias hypr-config-main='nvim ~/.config/hypr'
+alias omarchy-hypr-config='nvim /usr/share/omarchy/default/hypr/'
+alias ls="eza --icons -l"
+alias lsa="eza --icons -a"
 
 # pnpm
 set -gx PNPM_HOME "/home/nyash/.local/share/pnpm"
