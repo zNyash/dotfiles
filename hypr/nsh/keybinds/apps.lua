@@ -1,7 +1,4 @@
 -- Terminal
-hl.unbind("SUPER + Q")
-hl.bind("SUPER + Q", hl.dsp.exec_cmd(Terminal))
-
 -- File Manager
 hl.unbind("SUPER + E")
 hl.bind("SUPER + E", hl.dsp.exec_cmd(FileManager))
@@ -19,8 +16,8 @@ hl.unbind("SUPER + ALT + C")
 hl.bind("SUPER + ALT + C", hl.dsp.exec_cmd(CodingEditor))
 
 -- Github Desktop
-hl.unbind("SUPER + G")
-hl.bind("SUPER + G", hl.dsp.exec_cmd(GithubDesktop))
+-- hl.unbind("SUPER + G")
+-- hl.bind("SUPER + G", hl.dsp.exec_cmd(GithubDesktop))
 
 -- Launcher
 hl.unbind("SUPER + R")
@@ -31,8 +28,8 @@ hl.unbind("SUPER + L")
 hl.bind("SUPER + L", hl.dsp.exec_cmd(MenuLock))
 
 -- Clipboard menu
-hl.unbind("SUPER + V")
-hl.bind("SUPER + V", hl.dsp.exec_cmd(MenuClipboard))
+-- hl.unbind("SUPER + V")
+-- hl.bind("SUPER + V", hl.dsp.exec_cmd(MenuClipboard))
 
 -- Clipboard menu
 hl.unbind("SUPER + period")

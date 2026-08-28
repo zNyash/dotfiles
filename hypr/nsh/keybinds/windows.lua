@@ -1,6 +1,6 @@
 -- Basics
 hl.unbind("SUPER + T")
-hl.unbind("SUPER + P")
+-- hl.unbind("SUPER + P")
 hl.unbind("SUPER + W")
 hl.unbind("SUPER + F")
 hl.unbind("SUPER + ALT + F")

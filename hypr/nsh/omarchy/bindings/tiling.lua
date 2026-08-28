@@ -10,11 +10,11 @@ end
 
 
 -- Basics
-hl.unbind("SUPER + P")
+hl.unbind("SUPER + SHIFT + P")
 hl.unbind("SUPER + F")
 hl.unbind("SUPER + ALT + F")
 
-o.bind("SUPER + P", "Pin window", hl.dsp.window.pin())                                     -- Pin
+o.bind("SUPER + SHIFT + P", "Pin window", hl.dsp.window.pin())                             -- Pin
 o.bind("SUPER + F", "Maximized", hl.dsp.window.fullscreen({ mode = "maximized" }))         -- Maximize
 o.bind("SUPER + ALT + F", "Fullscreen", hl.dsp.window.fullscreen({ mode = "fullscreen" })) -- Fullscreen
 
