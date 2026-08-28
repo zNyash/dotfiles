@@ -433,24 +433,24 @@
           "Path": "RadialFollow.RadialFollowSmoothingTabletSpace",
           "Settings": [
             {
+              "Property": "OuterRadius",
+              "Value": 2.0
+            },
+            {
               "Property": "InnerRadius",
               "Value": 0.0
             },
             {
-              "Property": "SmoothingLeakCoefficient",
-              "Value": 0.25
-            },
-            {
-              "Property": "OuterRadius",
-              "Value": 2.0
+              "Property": "SmoothingCoefficient",
+              "Value": 0.75
             },
             {
               "Property": "SoftKneeScale",
               "Value": 1.0
             },
             {
-              "Property": "SmoothingCoefficient",
-              "Value": 0.75
+              "Property": "SmoothingLeakCoefficient",
+              "Value": 0.25
             }
           ],
           "Enable": false
@@ -495,6 +495,56 @@
             {
               "Property": "remove_tail_pressure_reports",
               "Value": 1
+            }
+          ],
+          "Enable": false
+        },
+        {
+          "Path": "TabletDriverFilters.Devocub.Antichatter",
+          "Settings": [
+            {
+              "Property": "Latency",
+              "Value": 2.0
+            },
+            {
+              "Property": "AntichatterStrength",
+              "Value": 3.0
+            },
+            {
+              "Property": "AntichatterMultiplier",
+              "Value": 1.0
+            },
+            {
+              "Property": "AntichatterOffsetX",
+              "Value": 0.0
+            },
+            {
+              "Property": "AntichatterOffsetY",
+              "Value": 1.0
+            },
+            {
+              "Property": "PredictionEnabled",
+              "Value": false
+            },
+            {
+              "Property": "PredictionStrength",
+              "Value": 1.1
+            },
+            {
+              "Property": "PredictionSharpness",
+              "Value": 1.0
+            },
+            {
+              "Property": "PredictionOffsetX",
+              "Value": 3.0
+            },
+            {
+              "Property": "PredictionOffsetY",
+              "Value": 0.3
+            },
+            {
+              "Property": "Frequency",
+              "Value": 1000.0
             }
           ],
           "Enable": false
