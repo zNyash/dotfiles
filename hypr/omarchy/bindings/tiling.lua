@@ -32,10 +32,12 @@ for workspace = 1, 10 do
 end
 
 -- Window actions
+utils.replace("SUPER + W", "Close window", hl.dsp.window.close())
 utils.replace("SUPER + SHIFT + P", "Pin window", hl.dsp.window.pin())
 utils.replace("SUPER + F", "Maximized", hl.dsp.window.fullscreen({ mode = "maximized" }))
 utils.replace("SUPER + ALT + F", "Fullscreen", hl.dsp.window.fullscreen({ mode = "fullscreen" }))
 utils.replace("SUPER + SHIFT + J", "Toggle window split", hl.dsp.layout("togglesplit"))
+utils.replace("SUPER + SHIFT + K", "Keybindings", "omarchy-menu-keybindings")
 
 -- Focus / move directions
 local directions = {
@@ -77,7 +79,6 @@ end
 
 -- Floating workspace window cycling
 hl.unbind("ALT + Tab")
-
 hl.bind("ALT + Tab", function()
 	hl.dispatch(hl.dsp.window.cycle_next())
 	hl.dispatch(hl.dsp.window.bring_to_top())
