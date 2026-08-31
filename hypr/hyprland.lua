@@ -16,15 +16,16 @@ require("default.hypr.omarchy")
 -- Put your personal overrides in these files. They're loaded after Omarchy's
 -- defaults so package updates can improve the defaults without rewriting your
 -- ~/.config/hypr files.
-require("hypr.monitors")
-require("hypr.input")
-require("hypr.bindings")
-require("hypr.looknfeel")
-require("hypr.autostart")
+-- require("hypr.monitors")
+-- require("hypr.input")
+-- require("hypr.bindings")
+-- require("hypr.looknfeel")
+-- require("hypr.autostart")
+require("nsh.keybinds.apps")
+require("omarchy.entry")
 
 -- Toggle config flags dynamically.
 require("default.hypr.toggles")
-require("nsh.entry")
 
 -- Add any other personal Hyprland configuration below.
 -- o.window("qemu", { workspace = "5" })

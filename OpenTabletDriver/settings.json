@@ -309,10 +309,6 @@
           "Path": "slimy_scylla.slimy_scylla_position_smoothing_exponential_moving_average",
           "Settings": [
             {
-              "Property": "amount",
-              "Value": 0.08
-            },
-            {
               "Property": "catch_up",
               "Value": true
             },
@@ -335,6 +331,10 @@
             {
               "Property": "never_intercept_pressure_on_off",
               "Value": false
+            },
+            {
+              "Property": "amount",
+              "Value": 0.13
             }
           ],
           "Enable": true

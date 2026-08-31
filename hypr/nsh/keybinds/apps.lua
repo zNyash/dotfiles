@@ -1,3 +1,5 @@
+require("nsh.variables")
+
 -- Terminal
 -- File Manager
 hl.unbind("SUPER + E")
