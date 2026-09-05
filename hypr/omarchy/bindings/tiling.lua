@@ -35,7 +35,11 @@ end
 utils.replace("SUPER + W", "Close window", hl.dsp.window.close())
 utils.replace("SUPER + SHIFT + P", "Pin window", hl.dsp.window.pin())
 utils.replace("SUPER + F", "Maximized", hl.dsp.window.fullscreen({ mode = "maximized" }))
-utils.replace("SUPER + ALT + F", "Fullscreen", hl.dsp.window.fullscreen({ mode = "fullscreen" }))
+utils.replace(
+	"SUPER + ALT + F",
+	"Fullscreen",
+	hl.dsp.window.fullscreen_state({ mode = "fullscreen", internal = 2, client = 0, action = "toggle" })
+)
 utils.replace("SUPER + SHIFT + J", "Toggle window split", hl.dsp.layout("togglesplit"))
 utils.replace("SUPER + SHIFT + K", "Keybindings", "omarchy-menu-keybindings")
 

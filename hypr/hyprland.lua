@@ -21,7 +21,7 @@ require("default.hypr.omarchy")
 -- require("hypr.bindings")
 -- require("hypr.looknfeel")
 -- require("hypr.autostart")
-require("nsh.keybinds.apps")
+-- require("nsh.keybinds.apps")
 require("omarchy.entry")
 
 -- Toggle config flags dynamically.

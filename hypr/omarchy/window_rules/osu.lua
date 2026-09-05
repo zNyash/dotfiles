@@ -1,9 +1,13 @@
 hl.window_rule({
-	match = { class = "osu!.exe" },
+	name = "osu!",
+	match = { class = ".*osu.*" },
 
-	immediate = true,
+	-- immediate = true,
+	-- fullscreen = true,
+	workspace = 5,
 	center = true,
 	opaque = true,
-	decorate = true,
-	workspace = 5,
+	no_anim = true,
+	no_dim = true,
+	no_blur = true,
 })
