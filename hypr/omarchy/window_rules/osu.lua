@@ -5,7 +5,6 @@ hl.window_rule({
 	-- immediate = true,
 	-- fullscreen = true,
 	workspace = 5,
-	center = true,
 	opaque = true,
 	no_anim = true,
 	no_dim = true,
