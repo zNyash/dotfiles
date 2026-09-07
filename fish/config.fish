@@ -1,4 +1,4 @@
-# source /usr/share/cachyos-fish-config/cachyos-config.fish
+source /usr/share/cachyos-fish-config/cachyos-config.fish
 
 if status is-interactive
     # Commands to run in interactive sessions can go here
@@ -10,6 +10,15 @@ function fish_greeting
    # smth smth
 end
 
+function y
+	set tmp (mktemp -t "yazi-cwd.XXXXXX")
+	command yazi $argv --cwd-file="$tmp"
+	if read -z cwd < "$tmp"; and [ "$cwd" != "$PWD" ]; and test -d "$cwd"
+		builtin cd -- "$cwd"
+	end
+	command rm -f -- "$tmp"
+end
+
 # Aliases
 # Pipewire
 alias pw-config='nvim ~/.config/pipewire/pipewire-pulse.conf'
@@ -18,8 +27,7 @@ alias pw-restart='systemctl --user restart pipewire pipewire-pulse'
 
 # Configs
 alias fish-config='nvim ~/.config/fish/config.fish'
-alias hypr-config="nvim ~/.config/hypr/nsh"
-alias hypr-config-main='nvim ~/.config/hypr'
+alias hypr-config='nvim ~/.config/hypr'
 alias omarchy-hypr-config='nvim /usr/share/omarchy/default/hypr/'
 alias ls="eza --icons -l"
 alias lsa="eza --icons -a"
