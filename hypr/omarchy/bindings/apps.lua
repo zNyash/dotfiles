@@ -21,5 +21,8 @@ utils.replace("SUPER + CTRL + SHIFT + P", "Open Pomodoro Panel", "omarchy-shell 
 -- System
 utils.replace("SUPER + ESCAPE", "System menu", "omarchy-menu toggle system")
 
+utils.replace("SUPER + SHIFT + M", "Open music using cliamp",
+  "omarchy-launch-tui cliamp 'https://www.youtube.com/watch?v=rFZHOHl-L8A' --auto-play")
+
 -- Window grouping
 hl.unbind("SUPER + G")
