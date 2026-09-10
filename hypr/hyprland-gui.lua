@@ -6,7 +6,7 @@ hl.env("XCURSOR_SIZE", "18")
 
 -- Settings
 hl.config({
-	cursor = {
-		no_hardware_cursors = 0,
-	},
+    cursor = {
+        no_hardware_cursors = 2,
+    },
 })
